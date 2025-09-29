@@ -1,0 +1,24 @@
+{
+  "name": "giai-cap-thuyetrinh",
+  "version": "1.0.0",
+  "description": "Website thuyết trình về Giai cấp và đấu tranh giai cấp",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next export"
+  },
+  "dependencies": {
+    "next": "^14.2.15",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.15"
+  },
+  "keywords": ["presentation", "marx-lenin", "philosophy", "vietnam"],
+  "author": "Presentation Team",
+  "license": "MIT"
+}

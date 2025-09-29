@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://giai-cap-thuyetrinh.vercel.app/sitemap.xml

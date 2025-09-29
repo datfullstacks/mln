@@ -1,0 +1,19 @@
+{
+  "name": "Giai cấp và Đấu tranh giai cấp - Thuyết trình",
+  "short_name": "Giai cấp Thuyết trình",
+  "description": "Website thuyết trình tương tác về Giai cấp và đấu tranh giai cấp theo quan điểm triết học Mác-Lênin",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "landscape-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["education", "presentation"],
+  "lang": "vi"
+}
