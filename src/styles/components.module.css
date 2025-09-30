@@ -232,7 +232,7 @@
 }
 
 .subtitle {
-  color: #d32f2f;
+  color: #ffffff;
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: 600;
@@ -240,7 +240,7 @@
 
 .description {
   font-size: 1.1rem;
-  color: #666;
+  color: #FFFFFF;
   margin-bottom: 2rem;
   line-height: 1.8;
 }
@@ -268,8 +268,9 @@
 }
 
 .author {
-  color: #d32f2f;
+  color: #FFFFFF;
   font-weight: 600;
+  font-size: 3 rem;
   font-style: italic;
   margin-top: 1rem;
 }
@@ -448,7 +449,7 @@
 }
 
 .mainQuote {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: #333;
   text-align: center;
@@ -760,6 +761,29 @@
   opacity: 0.3;
 }
 
+.summary {
+  background: linear-gradient(135deg, #ffebee, #ffcdd2);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #d32f2f;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+.conclusion {
+  background: linear-gradient(135deg, #e8f5e8, #c8e6c9);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #4caf50;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  line-height: 1.6;
+  margin: 1.5rem 0;
+  text-align: center;
+  font-weight: 500;
+}
+
 .callToAction {
   background: #4caf50;
   color: white;
@@ -951,11 +975,11 @@
   border-radius: 20px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   z-index: 1000;
-  max-width: 350px;
+  max-width: 400px;
 }
 
 .audioControls {
-  display: flex;
+  display: none;
   align-items: center;
   gap: 1rem;
 }

@@ -2,12 +2,12 @@ export const slides = [
   {
     id: 1,
     type: 'intro',
-    title: 'Giai cấp và đấu tranh giai cấp',
+    title: 'GIAI CẤP VÀ ĐẤU TRANH GIAI CẤP',
     content: {
       subtitle: 'Chương 3: Chủ nghĩa duy vật lịch sử - Phần II',
       description: 'Lý luận về giai cấp và đấu tranh giai cấp theo quan điểm triết học Mác-Lênin',
       quote: '"Lịch sử tất cả các xã hội cho đến ngày nay chỉ là lịch sử đấu tranh giai cấp" - K.Marx & F.Engels',
-      author: 'Nhóm thuyết trình Triết học Mác-Lênin',
+      author: 'Nhóm 6',
       objectives: [
         'Hiểu khái niệm giai cấp theo V.I.Lênin',
         'Nắm được nguồn gốc và nguyên nhân phân chia giai cấp',
@@ -417,7 +417,23 @@ export const slides = [
   {
     id: 12,
     type: 'conclusion',
-    title: 'Kết luận và trả lời câu hỏi',
+    title: 'Kết luận về lý thuyết giai cấp và đấu tranh giai cấp',
+    content: {
+      mainPoints: [
+        '📚 Lý thuyết Mác-Lênin về giai cấp giúp hiểu bản chất sự phân chia xã hội',
+        '⚡ Nguồn gốc giai cấp: phát triển lực lượng sản xuất → chế độ tư hữu',
+        '🔄 Đấu tranh giai cấp là động lực trực tiếp phát triển xã hội',
+        '🇻🇳 Việt Nam đang đấu tranh xây dựng xã hội công bằng, giảm bất bình đẳng'
+      ],
+      quote: '"Đấu tranh giai cấp tất yếu dẫn đến chuyên chính vô sản, bản thân nền chuyên chính này chỉ là bước quá độ tiến tới thủ tiêu mọi giai cấp và tiến tới xã hội không giai cấp" - K.Marx',
+      summary: 'Lý thuyết về giai cấp và đấu tranh giai cấp là nền tảng khoa học để hiểu và thay đổi xã hội theo hướng công bằng, tiến bộ.'
+    },
+    image: '/images/vietnam-development.jpg'
+  },
+  {
+    id: 13,
+    type: 'conclusion',
+    title: 'Trả lời câu hỏi: Phân tích bài hát "Lối nhỏ"',
     content: {
       question: 'Điều gì quy định sự khác biệt trong xã hội? Nguyên nhân là gì?',
       answers: [
@@ -434,16 +450,11 @@ export const slides = [
           content: 'Sự thừa kế địa vị xã hội ("cao tầng" vs "mái lá"), bất bình đẳng cơ hội ("đại lộ" vs "lối nhỏ"), mâu thuẫn giai cấp ("hải sản" vs "cá ao")'
         }
       ],
-      mainPoints: [
-        '📚 Lý thuyết Mác-Lênin về giai cấp giúp hiểu bản chất sự phân chia xã hội',
-        '🎵 Bài hát "Lối nhỏ" phản ánh sinh động thực trạng phân hóa giai cấp hiện đại',
-        '🇻🇳 Việt Nam đang đấu tranh xây dựng xã hội công bằng, giảm bất bình đẳng',
-        '🌟 Mục tiêu: xây dựng xã hội không phân biệt xuất thân, mọi người đều có cơ hội phát triển'
-      ],
-      quote: '"Sự khác biệt xã hội không phải tự nhiên mà có nguyên nhân khách quan sâu xa - hiểu được điều này giúp chúng ta xây dựng xã hội công bằng hơn"',
+      conclusion: '🎵 Bài hát "Lối nhỏ" phản ánh sinh động thực trạng phân hóa giai cấp trong xã hội hiện đại, cho thấy sự bất bình đẳng về cơ hội và điều kiện sống.',
       callToAction: 'Mỗi chúng ta hãy góp phần xây dựng xã hội bình đẳng cơ hội!',
       thanks: 'Cảm ơn các bạn đã lắng nghe!'
-    }
+    },
+    image: '/images/den-vau-loi-nho.jpg'
   }
 ];
 

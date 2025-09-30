@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import styles from '../styles/components.module.css';
+import PointsCarousel from './PointsCarousel';
 
 // Image Placeholder Component
 function ImagePlaceholder({ imagePath, alt, className = '' }) {
@@ -154,13 +155,11 @@ function TextSlide({ content }) {
   return (
     <div className={styles.textSlide}>
       <p className={styles.definition}>{content.definition}</p>
-      <ul className={styles.pointsList}>
-        {content.points.map((point, index) => (
-          <li key={index} className={styles.point}>
-            {point}
-          </li>
-        ))}
-      </ul>
+      
+      {content.points && (
+        <PointsCarousel items={content.points} type="points" />
+      )}
+      
       {content.note && (
         <div className={styles.note}>
           <p>{content.note}</p>
@@ -169,13 +168,7 @@ function TextSlide({ content }) {
       {content.examples && (
         <div className={styles.examples}>
           <h4>📋 Ví dụ:</h4>
-          <ul className={styles.examplesList}>
-            {content.examples.map((example, index) => (
-              <li key={index} className={styles.exampleItem}>
-                {example}
-              </li>
-            ))}
-          </ul>
+          <PointsCarousel items={content.examples} type="points" />
         </div>
       )}
     </div>
@@ -236,25 +229,7 @@ function QuoteAnalysisSlide({ content }) {
 function DetailedAnalysisSlide({ content }) {
   return (
     <div className={styles.detailedAnalysisSlide}>
-      <div className={styles.categoriesGrid}>
-        {content.categories.map((category, index) => (
-          <div 
-            key={index} 
-            className={styles.categoryCard}
-            style={{ borderColor: category.color }}
-          >
-            <div className={styles.categoryHeader}>
-              <span className={styles.categoryIcon}>{category.icon}</span>
-              <h3 style={{ color: category.color }}>{category.title}</h3>
-            </div>
-            <ul className={styles.categoryPoints}>
-              {category.points.map((point, pointIndex) => (
-                <li key={pointIndex}>{point}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+      <PointsCarousel items={content.categories} type="categories" />
     </div>
   );
 }
@@ -264,14 +239,11 @@ function ConceptSlide({ content }) {
   return (
     <div className={styles.conceptSlide}>
       <p className={styles.definition}>{content.definition}</p>
-      <div className={styles.characteristicsGrid}>
-        {content.characteristics.map((char, index) => (
-          <div key={index} className={styles.characteristicCard}>
-            <h4>{char.title}</h4>
-            <p>{char.description}</p>
-          </div>
-        ))}
-      </div>
+      
+      {content.characteristics && (
+        <PointsCarousel items={content.characteristics} type="characteristics" />
+      )}
+      
       <blockquote className={styles.conceptQuote}>
         {content.quote}
       </blockquote>
@@ -283,17 +255,10 @@ function ConceptSlide({ content }) {
 function ApplicationSlide({ content }) {
   return (
     <div className={styles.applicationSlide}>
-      <div className={styles.examplesTimeline}>
-        {content.examples.map((example, index) => (
-          <div key={index} className={styles.timelineItem}>
-            <div className={styles.timelinePeriod}>{example.period}</div>
-            <div className={styles.timelineContent}>
-              <p><strong>Nội dung:</strong> {example.description}</p>
-              <p><strong>Kết quả:</strong> {example.result}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+      {content.examples && (
+        <PointsCarousel items={content.examples} type="examples" />
+      )}
+      
       <div className={styles.modernRelevance}>
         <h4>🌟 Ý nghĩa hiện đại:</h4>
         <p>{content.modernRelevance}</p>
@@ -320,23 +285,40 @@ function ConclusionSlide({ content }) {
         </div>
       )}
       
-      <div className={styles.mainPointsList}>
-        {content.mainPoints.map((point, index) => (
-          <div key={index} className={styles.conclusionPoint}>
-            {point}
-          </div>
-        ))}
-      </div>
-      <blockquote className={styles.conclusionQuote}>
-        {content.quote}
-      </blockquote>
-      <div className={styles.callToAction}>
-        <p>{content.callToAction}</p>
-      </div>
-      <div className={styles.thanks}>
-        <h2>{content.thanks}</h2>
-        <div className={styles.thanksEmoji}>🙏✨</div>
-      </div>
+      {content.mainPoints && (
+        <PointsCarousel items={content.mainPoints} type="points" />
+      )}
+      
+      {content.quote && (
+        <blockquote className={styles.conclusionQuote}>
+          {content.quote}
+        </blockquote>
+      )}
+      
+      {content.summary && (
+        <div className={styles.summary}>
+          <p>{content.summary}</p>
+        </div>
+      )}
+      
+      {content.conclusion && (
+        <div className={styles.conclusion}>
+          <p>{content.conclusion}</p>
+        </div>
+      )}
+      
+      {content.callToAction && (
+        <div className={styles.callToAction}>
+          <p>{content.callToAction}</p>
+        </div>
+      )}
+      
+      {content.thanks && (
+        <div className={styles.thanks}>
+          <h2>{content.thanks}</h2>
+          <div className={styles.thanksEmoji}>🙏✨</div>
+        </div>
+      )}
     </div>
   );
 }
